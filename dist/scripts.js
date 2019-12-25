@@ -1,11 +1,11 @@
 "use strict";
 var timerStarted = false;
 function startBrew() {
-    if (timerStarted == true) {
+    if (timerStarted === true) {
         return;
     }
     var brewTimer = document.getElementById("brew-timer");
-    if (brewTimer == null) {
+    if (brewTimer === null) {
         console.error("No element with id: `brew-timer` found in DOM");
         return;
     }
@@ -22,7 +22,7 @@ function startTimer(brewTimer) {
     if (nextSecond > 59) {
         nextSecond = 0;
     }
-    if (nextSecond == 0) {
+    if (nextSecond === 0) {
         nextMinute = minute + 1;
     }
     var newTime = displayTime(nextMinute, nextSecond);
