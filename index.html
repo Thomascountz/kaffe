@@ -60,16 +60,13 @@
       </div>
 
       <ul class="list-group">
-        <li class="list-group-item mb-3 active"><p class="float-left">Total water: <span class="text-monospace" id="water-total">300g</span></p><p class="float-right">Total time: <span class="text-monospace" id="brew-timer">0:00</span></p></li>
+        <li class="list-group-item mb-3 list-group-item-primary">
+          <p class="float-left">Total water: <span class="text-monospace" id="water-total">300g</span></p>
+          <p class="float-right">Brew time: <span class="text-monospace" id="brew-timer">0:00</span></p>
+        </li>
       </ul>
-      <ul class="list-group">
-        <li class="list-group-item"><p class="float-left text-monospace">50g</p><p class="float-right text-monospace">0:00</p></li>
-        <li class="list-group-item"><p class="float-left text-monospace">70g</p><p class="float-right text-monospace">0:45</p></li>
-        <li class="list-group-item"><p class="float-left text-monospace">60g</p><p class="float-right text-monospace">1:30</p></li>
-        <li class="list-group-item"><p class="float-left text-monospace">60g</p><p class="float-right text-monospace">2:15</p></li>
-        <li class="list-group-item"><p class="float-left text-monospace">60g</p><p class="float-right text-monospace">3:00</p></li>
-      </ul>
-      <a class="btn btn-outline-primary btn-lg btn-block mt-3 mb-3" onclick="startBrew()" role="button">Begin Brew</a>
+      <ul class="list-group" id="step-list"></ul>
+      <a id="start-brew-buttom" class="btn btn-outline-primary btn-lg btn-block mt-3 mb-3" onclick="startBrew(event)" role="button">Start Brew</a>
       <footer class="row footer mb-3 mt-5">
         <div class="col-3">
           <a class="text-secondary" href="/about.html">about.</a>
