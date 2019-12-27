@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>kaffe.</title>
+    <meta name="description" content="My favorite way to make kaffe">
+    <meta name="author" content="Thomas Countz">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row mt-5 mb-5">
+        <div class="media">
+          <a href="/">
+            <img src="./images/pourover-logo.png" alt="pourover logo" width="80" height="80">
+          </a>
+        </div>
+      </div>
+      <h1 class="mb-4">
+        kaffe.
+        <span class="font-weight-lighter">v.0.0.1</span>
+      </h1>
+      <p>
+      <a class="btn btn-outline-secondary btn-lg btn-block" data-toggle="collapse" href="#methodDetails" role="button" aria-expanded="false" aria-controls="methodDetails"> The 4:6 Method </a>
+      </p>
+      <div class="collapse" id="methodDetails">
+        <div class="card card-body mb-2">
+          <h2>Tetsu Kasuya 4:6 Method<h2>
+              <h4>Equipment</h4> 
+              <div class="row ml-2">
+                <dt class="col-sm-3">Brewer</dt>
+                <dd class="col-sm-9">Hario V60 Size 02 w/ filter paper</dd>
+
+                <dt class="col-sm-3">20g Coffee</dt>
+                <dd class="col-sm-9">Freshly coarse-ground coffee</dd>
+
+                <dt class="col-sm-3">300g Water</dt>
+                <dd class="col-sm-9">93°C (1:15 brew ratio)</dd>
+              </div>
+              <h4>Method</h4>
+              <p class="ml-4">
+              The 4:6 method begins by dividing the total water into 40% and 60%. You pour the first 40% in two pours, and then decide how many pours you want to make for the last 60%.
+              </p>
+              <h5>The 40%</h5>
+              <p class="ml-4">
+              The ratio of the first 2 pours (40%), determine the balance of sweetness and acidity. When the first pour is greater than the second pour, the final cup tastes more acidic. When the first pour is less than the second pour, the cup tastes of more sweetness.
+              </p>
+              <h5>The 60%</h5>
+              <p class="ml-4">
+              The remaining number of pours (60%) will decide the strength of the coffee. A fewer number of pours will introduce less agitation to the coffee bed and the final cup will taste less strong. A larger number of pours will introduce more agitation to the coffee bed (increasing extraction), and the final cup will taste stronger.
+              </p>
+              <a class="text-right" href="https://kurasu.kyoto/blogs/kurasu-journal/2016-world-brewers-cup-champion-tetsu-kasuya">source.</a>
+        </div>
+      </div>
+
+      <div data-controller="stopwatch" data-stopwatch-time="0">
+        <ul class="list-group">
+          <li class="list-group-item mb-3 list-group-item-primary">
+            <p class="float-left">Total water: <span class="text-monospace" id="water-total">300g</span></p>
+            <p class="float-right">Brew time: <span class="text-monospace" id="brew-timer" data-target="stopwatch.display">0:00</span></p>
+          </li>
+        </ul>
+        <ul class="list-group" id="step-list">
+          <li class="list-group-item" data-step-at="0">
+            <p class="float-left text-monospace">add 50g</p>
+            <p class="float-right text-monospace">0:00</p>
+          </li>
+          <li class="list-group-item" data-step-at="45">
+            <p class="float-left text-monospace">add 70g = 120g</p>
+            <p class="float-right text-monospace">0:45</p>
+          </li>
+          <li class="list-group-item" data-step-at="90">
+            <p class="float-left text-monospace">add 60g = 180g</p>
+            <p class="float-right text-monospace">1:30</p>
+          </li>
+          <li class="list-group-item" data-step-at="135">
+            <p class="float-left text-monospace">add 60g = 240g</p>
+            <p class="float-right text-monospace">2:15</p>
+          </li>
+          <li class="list-group-item" data-step-at="180">
+            <p class="float-left text-monospace">add 60g = 300g</p>
+            <p class="float-right text-monospace">3:00</p>
+          </li>
+        </ul>
+        <a id="start-brew-buttom" class="btn btn-outline-primary btn-lg btn-block mt-3 mb-3" data-action="click->stopwatch#start" role="button">Start Brew</a>
+      </div>
+      <footer class="row footer mb-3 mt-5">
+        <div class="col-3">
+          <a class="text-secondary" href="./about.html">about.</a>
+        </div>
+        <div class="col-3">
+          <a class="text-secondary" href="./contact.html">contact.</a>
+        </div>
+        <div class="col-3">
+          <a class="text-secondary" href="https://www.twitter.com/thomascountz">twitter.</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

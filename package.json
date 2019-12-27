@@ -1,0 +1,35 @@
+{
+  "name": "kaffe",
+  "version": "0.0.1",
+  "description": "Selecting, roasting, brewing, and enjoying kaffe",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "stimulus": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomascountz/kaffe.git"
+  },
+  "author": "Thomas Countz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thomascountz/kaffe/issues"
+  },
+  "homepage": "https://github.com/Thomascountz/kaffe#readme"
+}
