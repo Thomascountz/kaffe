@@ -8,6 +8,11 @@ export default class extends Controller {
     this.renderTime()
   }
 
+  disconnect() {
+    this.isRunning = false;
+    clearInterval(this.stopWatch)
+  }
+    
   toggle(event) {
     if (this.isRunning) {
       this.stop()

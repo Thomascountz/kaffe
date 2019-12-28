@@ -1,28 +1,29 @@
-const webpack = require("webpack");
-const path = require("path");
-
-const defaultInclude = path.resolve(__dirname, "src");
+const path = require("path")
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, 'public')
+  entry: {
+    bundle: "./src/index.js"
   },
+
+  output: {
+    filename: "[name].js",
+    path: path.resolve(__dirname, "public")
+  },
+
+  mode: "production",
+  devtool: "source-map",
+
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: [{ loader: "babel-loader" }],
-        include: defaultInclude
-      },
+        exclude: [
+          /node_modules/
+        ],
+        use: [
+          { loader: "babel-loader" }
+        ]
+      }
     ]
-  },
-  stats: {
-    colors: true,
-    children: false,
-    chunks: false,
-    modules: false
   }
-};
-
+}
